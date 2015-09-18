@@ -1,8 +1,12 @@
 <div id='container'>
 <!-- Your code here -->
-  <form ng-submit="addLink()">
-    <input type="url" ng-model="link.url"/>
-  </form>
+  <div class="creator">
+    <form ng-submit="addLink()">
+      <input type="url" placeholder="Enter your URL here" ng-model="link.url"/>
+      <button>Add</button>
+    </form>
+    <img ng-show="loading" class="spinner" src="/assets/spiffygif_46x46.gif" />
+  </div>
 </div>
 
 
