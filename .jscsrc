@@ -21,5 +21,6 @@
   "requireSpaceBetweenArguments": true,
   "requireSpacesInForStatement": true,
   "requireSpacesInFunctionDeclaration": {"beforeOpeningCurlyBrace": true},
-  "requireSpacesInFunctionExpression": {"beforeOpeningCurlyBrace": true}
+  "requireSpacesInFunctionExpression": {"beforeOpeningCurlyBrace": true},
+  "excludeFiles": ["client/lib/**", "node_modules/**"]
 }
