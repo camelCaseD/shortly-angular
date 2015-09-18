@@ -1,11 +1,15 @@
 <div id='container'>
-<!-- Your code here -->
   <div class="creator">
-    <form ng-submit="addLink()">
-      <input type="url" placeholder="Enter your URL here" ng-model="link.url"/>
+    <form name="form" ng-submit="addLink()">
+      <input ng-class="{error: form.$dirty && form.$invalid}" type="url" required placeholder="Enter your URL here" ng-model="link.url" />
       <button>Add</button>
     </form>
     <img ng-show="loading" class="spinner" src="/assets/spiffygif_46x46.gif" />
+
+    <div ng-show="form.$invalid" ng-hide="form.$pristine" class="message">
+      <h2 ng-show="form.$error.url">Please provide a valid url</h2>
+      <h2 ng-show="form.$error.required">Please provide a url</h2>
+    </div>
   </div>
 </div>
 
