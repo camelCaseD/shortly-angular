@@ -1,19 +1,16 @@
 <div id='signup'>
-  <h1>signup</h1>
   <form name="signupForm" ng-submit='signup()'>
-    <input placeholder="Choose a username" ng-class="{error: isDirty('username') && !user.username}" name="username" type='text' ng-model='user.username'>
-
-    <div class="message" ng-show="isDirty('username') && !user.username">
-      Please choose a username
+    <div class="input-field">
+      <input id="username" class="validate" ng-class="{invalid: isDirty('username') && !user.username}" name="username" type='text' ng-model='user.username'>
+      <label for="username" data-error="Please choose a username">Username</label>
     </div>
 
-    <input placeholder="Choose a password" ng-class="{error: isDirty('password') && !user.password}" name="password" type="password" ng-model='user.password'>
-
-    <div class="message" ng-show="isDirty('password') && !user.password">
-      Please choose a password
+    <div class="input-field" style="display: block;">
+      <input id="password" class="validate" ng-class="{error: isDirty('password') && !user.password}" name="password" type="password" ng-model='user.password'>
+      <label for="password" data-error="Please choose a password">Password</label>
     </div>
 
-    <button>signup</button>
+    <button class="btn blue-grey">signup</button>
   </form>
   <a href="#/signin">Already have an account? <strong>Signin</strong> ...</a>
 </div>
