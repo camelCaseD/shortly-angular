@@ -29,4 +29,21 @@ angular.module('shortly.auth', [])
         console.error(error);
       });
   };
+
+  $scope.isDirty = function (name) {
+    var $inputs = angular.element('input');
+
+    var dirty = false;
+    $inputs.each(function (index, el) {
+      if (angular.element(el).attr('name') === name) {
+        dirty = angular.element(el).hasClass('ng-dirty');
+      }
+    });
+
+    return dirty;
+  };
+
+  $scope.logout = function () {
+    Auth.signout();
+  };
 });

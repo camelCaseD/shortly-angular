@@ -1,8 +1,18 @@
 <div id='signin'>
   <h1>signin</h1>
   <form name="signinForm" ng-submit='signin()'>
-    <input type='text'ng-model='user.username'>
-    <input type="password" ng-model='user.password'>
+    <input placeholder="Username" type='text' name="username" ng-class="{error: isDirty('username') && !user.username}" required ng-model='user.username'>
+
+    <div class="message" ng-show="isDirty('username') && !user.username">
+      <strong>Please provide your username</strong>
+    </div>
+
+    <input placeholder="Password" type="password" name="password" ng-class="{error: isDirty('password') && !user.password}" required ng-model='user.password'>
+
+    <div class="message" ng-show="isDirty('password') && !user.password">
+      <strong>Please provide your password</strong>
+    </div>
+    
     <button>signin</button>
   </form>
   <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>
