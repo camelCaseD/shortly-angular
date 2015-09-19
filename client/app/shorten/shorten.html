@@ -7,7 +7,18 @@
       </div>
       <button class="btn blue-grey">Add</button>
     </form>
-    <img ng-show="loading" class="spinner" src="/assets/spiffygif_46x46.gif" />
+
+    <div class="preloader-wrapper big" ng-class="{active: loading}">
+      <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
 
     <div ng-show="form.$invalid" ng-hide="form.$pristine" class="message">
 
