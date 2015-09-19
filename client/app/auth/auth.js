@@ -7,6 +7,7 @@ angular.module('shortly.auth', [])
   $scope.user = {};
 
   $scope.isAuth = Auth.isAuth;
+  $scope.$location = $location;
 
   $scope.signin = function () {
     Auth.signin($scope.user)

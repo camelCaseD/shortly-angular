@@ -145,3 +145,10 @@ input[type=url]:focus {
   clear: both;
 }
 
+.input-field, label {
+  width: 400px;
+}
+
+.input-field {
+  display: inline-block;
+}

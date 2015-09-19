@@ -4,20 +4,23 @@
     <meta charset="utf-8" />
     <title>Shortly</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/Materialize/dist/css/materialize.css" />
   </head>
-  <body>
-    <h1>Shortly</h1>
-    <div class="navigation" ng-controller="AuthController" ng-hide="!isAuth()">
-      <ul>
-        <li><a href="#/links">All Links</a></li>
-        <li><a href="#/shorten">Shorten</a></li>
-        <li><a href="" ng-click="logout()">Logout</a></li>
-      </ul>
-    </div>
+  <body class="blue-grey darken-3">
+    <nav class="blue-grey" ng-controller="AuthController" ng-hide="!isAuth()">
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="hide-on-med-and-down">
+          <li ng-class="{active: $location.path() === '/links'}"><a href="#/links">All Links</a></li>
+          <li ng-class="{active: $location.path() === '/shorten'}"><a href="#/shorten">Shorten</a></li>
+          <li><a href="" ng-click="logout()">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
     <div ng-view></div>
 
     <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/Materialize/dist/js/materialize.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
 
