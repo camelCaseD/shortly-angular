@@ -6,8 +6,10 @@ angular.module('shortly.shorten', [])
 
   $scope.addLink = function () {
     $scope.loading = true;
-    Links.addLink($scope.link).then(function () {
+    Links.addLink($scope.link).then(function (link) {
       $scope.loading = false;
+
+      $scope.link = link.data;
     }, function () {
       $scope.loading = false;
     });
