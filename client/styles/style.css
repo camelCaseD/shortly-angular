@@ -5,7 +5,7 @@ body {
 }
 
 a {
-  color: #333;
+  color: #90a4ae;
   font-size: 14px;
   text-decoration: none;
 }
@@ -58,13 +58,14 @@ h1 {
   margin-bottom: 5px;
   padding: 5px;
   min-height: 50px;
+  color: #cfd8dc;
 }
 
 .link:hover {
-  background-color: #efe;
+  background-color: #607d8b;
 }
 
-.link img {
+.link img, .link i {
   float: left;
   margin: 0 5px;
 }

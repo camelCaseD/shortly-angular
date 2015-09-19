@@ -5,7 +5,7 @@
       <li ng-class="{active: $location.path() === '/shorten'}"><a href="#/shorten">Shorten</a></li>
       <li><a href="" ng-click="logout()">Logout</a></li>
     </ul>
-    
+
     <div class="input-field" style="width: 80%;">
       <input id="search" type="search" ng-model="searchText">
       <label for="search"><i class="material-icons">search</i></label>
@@ -16,7 +16,7 @@
 
 <div id='container'>
   <div ng-repeat="link in data.links | orderBy:'-visits' | filter:searchText" class="link">
-    <img src='/assets/redirect_icon.png'/>
+    <i class="material-icons grey-text text-lighten-2" style="font-size: 42px;">input</i>
     <div class='info'>
       <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
       <div class='title'>{{link.title}}</div>
